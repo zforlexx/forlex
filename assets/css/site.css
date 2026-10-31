@@ -674,6 +674,7 @@ code { overflow-wrap: anywhere; word-break: break-word; }
     .float-card--tweaks b { font-size: 1.05rem; }
     .float-card--safe { display: none; }
     .mockup-frame { transform: none; }
+    .mockup-title { display: none; }
 }
 
 /* ============================================================

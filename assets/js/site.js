@@ -746,7 +746,7 @@
                 th.className = 'gal-thumb' + (i === 0 ? ' active' : '');
                 th.setAttribute('aria-label', 'Ver captura: ' + item.cap);
                 const im = doc.createElement('img');
-                im.src = item.src;
+                im.src = item.src.replace('/img/', '/img/thumbs/');
                 im.alt = '';
                 im.loading = 'lazy';
                 im.decoding = 'async';
