@@ -2045,19 +2045,24 @@ code { overflow-wrap: anywhere; word-break: break-word; }
 }
 
 .cat-preview img {
-    flex: 0 0 118px; width: 118px; height: 190px;
+    flex: 0 0 132px; width: 132px; height: 250px;
     object-fit: cover; object-position: top center;
     border-radius: 12px;
     border: 1px solid rgba(139, 92, 246, 0.32);
     box-shadow: var(--shadow-md);
+    filter: brightness(1.22) contrast(1.04);
+    cursor: zoom-in;
+    transition: transform 0.5s var(--ease-out), filter 0.4s ease;
 }
+
+.cat-preview img:hover { transform: scale(1.02); filter: brightness(1.32) contrast(1.06); }
 
 .cat-preview p { font-size: 0.74rem; color: #a9a3c9; line-height: 1.65; }
 .cat-preview p i { color: var(--violet-light); margin-right: 7px; }
 .cat-preview p strong { color: #e7e3f8; }
 
 @media (min-width: 640px) {
-    .cat-preview img { flex-basis: 150px; width: 150px; height: 220px; }
+    .cat-preview img { flex-basis: 210px; width: 210px; height: 370px; }
     .cat-preview p { font-size: 0.8rem; }
 }
 /* ============================================================
