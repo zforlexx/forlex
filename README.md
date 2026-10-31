@@ -9,7 +9,7 @@ deshacerlo todo.
 [![Windows 10/11](https://img.shields.io/badge/Windows-10%2F11-0078d4)](#requisitos)
 [![Sin telemetría](https://img.shields.io/badge/sin%20telemetr%C3%ADa-100%25%20local-2ea043)](#privacidad)
 
-**Sitio oficial: [https://zforlexx.github.io/forlex/](https://zforlexx.github.io/forlex/)**
+**Sitio oficial: [https://zforlexx.github.io/forlex/](https://zforlexx.github.io/forlex/) — Discord: [discord.gg/vr2rjqFPyG](https://discord.gg/vr2rjqFPyG)**
 
 Forlex Optimizer es una aplicación nativa de escritorio escrita en **C# + WPF (.NET Framework 4.8)** y
 distribuida como ejecutable portable: sin instalador, sin servicios en segundo plano y sin conexiones a
@@ -157,6 +157,15 @@ El sitio se publica automáticamente desde la rama `main` con GitHub Pages. Los 
 assets de un **GitHub Release** con la etiqueta de versión (`v1.0.0`, `v1.1.0`, …); abajo quedan también
 como espejo en `downloads/`. Las notas de cada versión se leen en
 [Releases](https://github.com/zforlexx/forlex/releases).
+
+## Comunidad y soporte
+
+- **Discord oficial:** <https://discord.gg/vr2rjqFPyG>
+  - `#soporte` para dudas y problemas del optimizador.
+  - `#trabajos` y `#clientes` para encargos de Minecraft y desarrollo a medida (trabajos de **pago ($)**).
+  - `#anuncios` para novedades de versiones.
+- Para reportar un fallo del optimizador, indica tu versión de Windows, el tweak implicado y, si puedes,
+  adjunta el log de `%LOCALAPPDATA%\ForlexOptimizer\logs\`.
 
 ## Licencia y créditos
 
