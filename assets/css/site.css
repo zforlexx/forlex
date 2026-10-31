@@ -2038,6 +2038,7 @@ code { overflow-wrap: anywhere; word-break: break-word; }
 .cat-preview {
     display: flex; align-items: center; gap: 16px;
     margin-top: 16px;
+    max-width: 760px;
     background: rgba(15, 14, 32, 0.6);
     border: 1px solid rgba(139, 92, 246, 0.2);
     border-radius: var(--radius-md);
