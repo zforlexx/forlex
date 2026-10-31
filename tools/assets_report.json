@@ -1,0 +1,549 @@
+{
+  "webp": {
+    "inicio.webp": {
+      "size": [
+        1571,
+        992
+      ],
+      "kb": 64.3,
+      "src": "01-inicio.png",
+      "quality": 88
+    },
+    "equipo.webp": {
+      "size": [
+        1566,
+        922
+      ],
+      "kb": 60.2,
+      "src": "03-equipo.png",
+      "quality": 88
+    },
+    "hardware.webp": {
+      "size": [
+        1582,
+        838
+      ],
+      "kb": 67.1,
+      "src": "04-hardware.png",
+      "quality": 88
+    },
+    "categorias.webp": {
+      "size": [
+        262,
+        757
+      ],
+      "kb": 19.8,
+      "src": "02-categorias.png",
+      "quality": 88
+    },
+    "virustotal.webp": {
+      "size": [
+        1600,
+        724
+      ],
+      "kb": 50.7,
+      "src": "05-virustotal.png",
+      "quality": 88
+    },
+    "tweaks.webp": {
+      "size": [
+        1600,
+        850
+      ],
+      "kb": 107.8,
+      "src": "shots/fin_tweaks.png",
+      "crop_top": 1020,
+      "quality": 88
+    },
+    "optimizeall.webp": {
+      "size": [
+        1600,
+        850
+      ],
+      "kb": 97.7,
+      "src": "shots/fin_optimizeall.png",
+      "crop_top": 1020,
+      "quality": 88
+    },
+    "gpu.webp": {
+      "size": [
+        1600,
+        850
+      ],
+      "kb": 113.4,
+      "src": "shots/fin_gpu.png",
+      "crop_top": 1020,
+      "quality": 88
+    },
+    "gamemode.webp": {
+      "size": [
+        1600,
+        850
+      ],
+      "kb": 64.4,
+      "src": "shots/fin_gamemode.png",
+      "crop_top": 1020,
+      "quality": 88
+    },
+    "games.webp": {
+      "size": [
+        1600,
+        850
+      ],
+      "kb": 74.6,
+      "src": "shots/fin_games.png",
+      "crop_top": 1020,
+      "quality": 88
+    },
+    "tests.webp": {
+      "size": [
+        1600,
+        850
+      ],
+      "kb": 62.7,
+      "src": "shots/fin_tests.png",
+      "crop_top": 1020,
+      "quality": 88
+    },
+    "backups.webp": {
+      "size": [
+        1600,
+        850
+      ],
+      "kb": 100.3,
+      "src": "shots/fin_backups.png",
+      "crop_top": 1020,
+      "quality": 88
+    },
+    "customize.webp": {
+      "size": [
+        1600,
+        850
+      ],
+      "kb": 68.5,
+      "src": "shots/fin_customize.png",
+      "crop_top": 1020,
+      "quality": 88
+    },
+    "cleaner.webp": {
+      "size": [
+        1600,
+        850
+      ],
+      "kb": 76.9,
+      "src": "shots/fin_cleaner.png",
+      "crop_top": 1020,
+      "quality": 88
+    },
+    "diagnose.webp": {
+      "size": [
+        1600,
+        850
+      ],
+      "kb": 87.7,
+      "src": "shots/fin_diagnose.png",
+      "crop_top": 1020,
+      "quality": 88
+    },
+    "powerplan.webp": {
+      "size": [
+        1600,
+        850
+      ],
+      "kb": 75.5,
+      "src": "shots/fin_powerplan.png",
+      "crop_top": 1020,
+      "quality": 88
+    },
+    "programs.webp": {
+      "size": [
+        1600,
+        850
+      ],
+      "kb": 89.1,
+      "src": "shots/fin_programs.png",
+      "crop_top": 1020,
+      "quality": 88
+    },
+    "startup.webp": {
+      "size": [
+        1600,
+        850
+      ],
+      "kb": 96.4,
+      "src": "shots/fin_startup.png",
+      "crop_top": 1020,
+      "quality": 88
+    },
+    "fixes.webp": {
+      "size": [
+        1600,
+        850
+      ],
+      "kb": 95.4,
+      "src": "shots/fin_fixes.png",
+      "crop_top": 1020,
+      "quality": 88
+    },
+    "assistant.webp": {
+      "size": [
+        1600,
+        850
+      ],
+      "kb": 56.0,
+      "src": "shots/fin_assistant.png",
+      "crop_top": 1020,
+      "quality": 88
+    },
+    "profile.webp": {
+      "size": [
+        1600,
+        850
+      ],
+      "kb": 69.6,
+      "src": "shots/fin_profile.png",
+      "crop_top": 1020,
+      "quality": 88
+    },
+    "inicio-hero.webp": {
+      "size": [
+        1800,
+        1137
+      ],
+      "kb": 97.8,
+      "src": "01-inicio.png (upscale 1800)",
+      "quality": 90
+    }
+  },
+  "og": {
+    "size": [
+      1200,
+      630
+    ],
+    "kb": 556.1,
+    "panel": [
+      592,
+      144,
+      1132,
+      485
+    ],
+    "text_blocks": {
+      "eyebrow": [
+        68,
+        145,
+        347,
+        165
+      ],
+      "title1": [
+        68,
+        212,
+        384,
+        273
+      ],
+      "title2": [
+        70,
+        299,
+        538,
+        360
+      ],
+      "accent": [
+        68,
+        379,
+        186,
+        384
+      ],
+      "subtitle1": [
+        68,
+        424,
+        368,
+        449
+      ],
+      "subtitle2": [
+        68,
+        461,
+        342,
+        483
+      ]
+    },
+    "left_column_width": 472,
+    "font": "seguibl.ttf"
+  },
+  "favicon": {
+    "favicon-32.png": {
+      "size": [
+        32,
+        32
+      ],
+      "kb": 1.6
+    },
+    "favicon-192.png": {
+      "size": [
+        192,
+        192
+      ],
+      "kb": 16.2
+    },
+    "favicon-512.png": {
+      "size": [
+        512,
+        512
+      ],
+      "kb": 60.7
+    },
+    "apple-touch-icon.png": {
+      "size": [
+        180,
+        180
+      ],
+      "kb": 13.9
+    },
+    "favicon.ico": {
+      "sizes": [
+        [
+          16,
+          16
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          48,
+          48
+        ]
+      ],
+      "kb": 5.0
+    }
+  },
+  "taskbar": {
+    "fin_tweaks.png": {
+      "src": [
+        1920,
+        1080
+      ],
+      "taskbar_top": 1020,
+      "cropped": [
+        1920,
+        1020
+      ]
+    },
+    "fin_optimizeall.png": {
+      "src": [
+        1920,
+        1080
+      ],
+      "taskbar_top": 1020,
+      "cropped": [
+        1920,
+        1020
+      ]
+    },
+    "fin_gpu.png": {
+      "src": [
+        1920,
+        1080
+      ],
+      "taskbar_top": 1020,
+      "cropped": [
+        1920,
+        1020
+      ]
+    },
+    "fin_gamemode.png": {
+      "src": [
+        1920,
+        1080
+      ],
+      "taskbar_top": 1020,
+      "cropped": [
+        1920,
+        1020
+      ]
+    },
+    "fin_games.png": {
+      "src": [
+        1920,
+        1080
+      ],
+      "taskbar_top": 1020,
+      "cropped": [
+        1920,
+        1020
+      ]
+    },
+    "fin_tests.png": {
+      "src": [
+        1920,
+        1080
+      ],
+      "taskbar_top": 1020,
+      "cropped": [
+        1920,
+        1020
+      ]
+    },
+    "fin_backups.png": {
+      "src": [
+        1920,
+        1080
+      ],
+      "taskbar_top": 1020,
+      "cropped": [
+        1920,
+        1020
+      ]
+    },
+    "fin_customize.png": {
+      "src": [
+        1920,
+        1080
+      ],
+      "taskbar_top": 1020,
+      "cropped": [
+        1920,
+        1020
+      ]
+    },
+    "fin_cleaner.png": {
+      "src": [
+        1920,
+        1080
+      ],
+      "taskbar_top": 1020,
+      "cropped": [
+        1920,
+        1020
+      ]
+    },
+    "fin_diagnose.png": {
+      "src": [
+        1920,
+        1080
+      ],
+      "taskbar_top": 1020,
+      "cropped": [
+        1920,
+        1020
+      ]
+    },
+    "fin_powerplan.png": {
+      "src": [
+        1920,
+        1080
+      ],
+      "taskbar_top": 1020,
+      "cropped": [
+        1920,
+        1020
+      ]
+    },
+    "fin_programs.png": {
+      "src": [
+        1920,
+        1080
+      ],
+      "taskbar_top": 1020,
+      "cropped": [
+        1920,
+        1020
+      ]
+    },
+    "fin_startup.png": {
+      "src": [
+        1920,
+        1080
+      ],
+      "taskbar_top": 1020,
+      "cropped": [
+        1920,
+        1020
+      ]
+    },
+    "fin_fixes.png": {
+      "src": [
+        1920,
+        1080
+      ],
+      "taskbar_top": 1020,
+      "cropped": [
+        1920,
+        1020
+      ]
+    },
+    "fin_assistant.png": {
+      "src": [
+        1920,
+        1080
+      ],
+      "taskbar_top": 1020,
+      "cropped": [
+        1920,
+        1020
+      ]
+    },
+    "fin_profile.png": {
+      "src": [
+        1920,
+        1080
+      ],
+      "taskbar_top": 1020,
+      "cropped": [
+        1920,
+        1020
+      ]
+    },
+    "_summary": {
+      "detected_tops": [
+        1020
+      ],
+      "files": 16,
+      "cropped_size": [
+        1920,
+        1020
+      ],
+      "note": "todas las tomas recortadas en la misma Y; alto final 850 px"
+    }
+  },
+  "manifest": {
+    "size": [
+      null,
+      null
+    ],
+    "kb": 0.6
+  },
+  "total_bytes": 2521598,
+  "total_kb": 2462.5,
+  "files": [
+    "assets/css/site.css",
+    "assets/favicon/apple-touch-icon.png",
+    "assets/favicon/favicon-192.png",
+    "assets/favicon/favicon-32.png",
+    "assets/favicon/favicon-512.png",
+    "assets/favicon/favicon.ico",
+    "assets/img/assistant.webp",
+    "assets/img/backups.webp",
+    "assets/img/categorias.webp",
+    "assets/img/cleaner.webp",
+    "assets/img/customize.webp",
+    "assets/img/diagnose.webp",
+    "assets/img/equipo.webp",
+    "assets/img/fixes.webp",
+    "assets/img/gamemode.webp",
+    "assets/img/games.webp",
+    "assets/img/gpu.webp",
+    "assets/img/hardware.webp",
+    "assets/img/inicio-hero.webp",
+    "assets/img/inicio.webp",
+    "assets/img/optimizeall.webp",
+    "assets/img/powerplan.webp",
+    "assets/img/profile.webp",
+    "assets/img/programs.webp",
+    "assets/img/startup.webp",
+    "assets/img/tests.webp",
+    "assets/img/tweaks.webp",
+    "assets/img/virustotal.webp",
+    "assets/js/site.js",
+    "assets/og.png",
+    "assets/site.webmanifest"
+  ]
+}

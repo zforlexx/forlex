@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Forlex — Creador de Forlex Optimizer · Bots y plugins de Minecraft</title>
+    <meta name="description" content="Forlex: desarrollador de bots de Discord y plugins de Minecraft (Folia, Paper, Purpur). Creador de Forlex Optimizer, el optimizador para Windows 10/11 con 393 tweaks y reversión completa. Descárgalo gratis.">
+    <meta name="author" content="Forlex">
+    <meta name="theme-color" content="#041410">
+    <meta name="robots" content="index, follow">
+    <meta name="color-scheme" content="dark">
+
+    <link rel="canonical" href="https://zforlexx.github.io/forlex/">
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Forlex">
+    <meta property="og:title" content="Forlex — Creador de Forlex Optimizer">
+    <meta property="og:description" content="Bots de Discord, plugins de Minecraft y Forlex Optimizer: 393 tweaks para Windows 10/11, 16 categorías y reversión completa. Descarga gratis.">
+    <meta property="og:url" content="https://zforlexx.github.io/forlex/">
+    <meta property="og:image" content="https://zforlexx.github.io/forlex/assets/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Forlex Optimizer — 393 tweaks para Windows 10/11">
+    <meta property="og:locale" content="es_ES">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Forlex — Creador de Forlex Optimizer">
+    <meta name="twitter:description" content="393 tweaks, 16 categorías y reversión completa para Windows 10/11. Descarga gratis Forlex Optimizer.">
+    <meta name="twitter:image" content="https://zforlexx.github.io/forlex/assets/og.png">
+
+    <!-- Iconos -->
+    <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/favicon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+
+    <!-- Tipografías e iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
+
+    <link rel="stylesheet" href="assets/css/site.css">
+    <link rel="preload" as="image" href="assets/img/inicio-hero.webp">
+
+    <noscript>
+        <style>
+            .reveal { opacity: 1 !important; transform: none !important; filter: none !important; }
+            .hero-badge, .hero h1, .typed-role, .hero-tagline, .hero-actions, .profile-row, .trust-strip, .hero-visual { opacity: 1 !important; animation: none !important; }
+            .ring .bar { stroke-dashoffset: 27.6 !important; }
+            .cat-track { flex-wrap: wrap; animation: none !important; width: auto !important; }
+        </style>
+    </noscript>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "name": "Forlex",
+          "alternateName": "zForlex",
+          "url": "https://zforlexx.github.io/forlex/",
+          "description": "Desarrollador de bots de Discord, plugins de Minecraft y creador de Forlex Optimizer.",
+          "knowsAbout": ["Discord bots", "Minecraft plugins", "Folia", "Paper", "Purpur", "Windows optimization", "C#", ".NET", "Java"]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Forlex Optimizer",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Windows 10, Windows 11",
+          "softwareVersion": "1.0.0",
+          "fileSize": "2.32 MB",
+          "license": "https://opensource.org/licenses/MIT",
+          "downloadUrl": "https://github.com/zforlexx/forlex/releases/latest/download/ForlexOptimizer.exe",
+          "url": "https://zforlexx.github.io/forlex/#optimizer",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+        },
+        {
+          "@type": "WebSite",
+          "name": "Forlex",
+          "url": "https://zforlexx.github.io/forlex/",
+          "inLanguage": "es"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- FONDO -->
+    <div class="bg-layer" aria-hidden="true"></div>
+    <div class="aurora" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    <canvas id="particles" aria-hidden="true"></canvas>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cursor-aura" id="cursorAura" aria-hidden="true"></div>
+
+    <!-- PROGRESO -->
+    <div class="progress-wrap" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
+
+    <!-- NAVBAR -->
+    <nav class="topbar" id="topbar" aria-label="Navegación principal">
+        <a class="brand" href="#inicio" aria-label="Forlex, ir al inicio"><i class="fas fa-bolt"></i><span>FORLEX</span></a>
+        <div class="nav-links" id="navLinks">
+            <a class="nav-link" href="#sobre-mi">Sobre mí</a>
+            <a class="nav-link" href="#trayectoria">Trayectoria</a>
+            <a class="nav-link" href="#optimizer">Optimizer</a>
+            <a class="nav-link" href="#pracpvp">PracPvP</a>
+            <a class="nav-link" href="#contacto">Contacto</a>
+        </div>
+        <a class="nav-cta" href="#descargar" data-sound="click"><i class="fas fa-download"></i><span>Descargar</span></a>
+        <button class="sound-toggle hint" id="soundToggle" type="button"
+                aria-pressed="false" title="Activar sonidos de interfaz" aria-label="Activar sonidos de interfaz">
+            <i class="fas fa-volume-mute"></i>
+        </button>
+    </nav>
+
+    <!-- LIGHTBOX -->
+    <div id="imageModal" class="modal" role="dialog" aria-modal="true" aria-label="Vista ampliada de la captura">
+        <button class="close-modal" id="closeModal" type="button" aria-label="Cerrar">&times;</button>
+        <button class="modal-arrow modal-arrow--prev" id="modalPrev" type="button" aria-label="Captura anterior"><i class="fas fa-chevron-left"></i></button>
+        <button class="modal-arrow modal-arrow--next" id="modalNext" type="button" aria-label="Captura siguiente"><i class="fas fa-chevron-right"></i></button>
+        <figure class="modal-figure">
+            <img class="modal-content" id="modalImage" alt="Captura de Forlex Optimizer">
+            <figcaption class="modal-cap" id="modalCap">Forlex Optimizer</figcaption>
+            <span class="modal-hint">Clic o ESC para cerrar</span>
+        </figure>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast" role="status" aria-live="polite"><i class="fas fa-check"></i><span id="toastText">Copiado</span></div>
+
+    <!-- SCROLL TOP -->
+    <button class="to-top" id="toTop" type="button" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
+
+    <main class="container">
+
+        <!-- ================= HERO ================= -->
+        <header class="hero" id="inicio">
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <div class="hero-badge"><span class="dot"></span> Disponible para encargos de Minecraft <b>($)</b></div>
+
+                    <div class="profile-row">
+                        <div class="avatar-wrapper">
+                            <img src="https://mc-heads.net/head/zforlex/120"
+                                 onerror="this.onerror=null;this.src='https://minotar.net/helm/zforlex/120';"
+                                 alt="Avatar de Forlex" class="avatar" id="avatar"
+                                 data-full="https://mc-heads.net/head/zforlex/512"
+                                 width="120" height="120" loading="eager"
+                                 tabindex="0" role="button" aria-label="Ampliar avatar de Forlex">
+                            <span class="status-chip"><i class="fas fa-circle" style="font-size:0.36rem"></i> ONLINE</span>
+                        </div>
+                        <div class="profile-meta">
+                            <span class="profile-name">zForlex</span>
+                            <span class="profile-status"><i class="fas fa-circle"></i> Abierto a trabajos de Minecraft <b>($)</b></span>
+                        </div>
+                    </div>
+
+                    <h1>FORLEX<span class="dot-accent">.</span></h1>
+                    <p class="typed-role" id="typedRole"><span id="typedText"></span><span class="caret"></span></p>
+
+                    <p class="hero-tagline">
+                        Creador de <strong>Forlex Optimizer</strong>: 393 tweaks para dejar tu Windows listo para jugar,
+                        con reversión completa. Bots de Discord, plugins de Minecraft y comunidades desde 2023.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="btn btn--violet" href="#descargar" data-sound="click"><i class="fas fa-download"></i> Descargar Forlex Optimizer</a>
+                        <a class="btn btn--ghost" href="#sobre-mi" data-sound="click"><i class="fas fa-user-astronaut"></i> Conóceme</a>
+                    </div>
+
+                    <div class="trust-strip">
+                        <span class="trust-chip"><i class="fas fa-shield-halved"></i><b>0/71</b>&nbsp;detecciones</span>
+                        <span class="trust-chip"><i class="fas fa-hard-drive"></i><b>2.32 MB</b>&nbsp;portable</span>
+                        <span class="trust-chip"><i class="fab fa-windows"></i>Windows 10/11 · 64 bits</span>
+                        <span class="trust-chip"><i class="fas fa-user-secret"></i>Sin telemetría</span>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="mockup">
+                        <div class="mockup-glow" aria-hidden="true"></div>
+                        <div class="mockup-frame">
+                            <div class="mockup-bar" aria-hidden="true">
+                                <span class="mockup-dots"><span></span><span></span><span></span></span>
+                                <span class="mockup-title">Forlex Optimizer · Inicio</span>
+                            </div>
+                            <img src="assets/img/inicio-hero.webp" alt="Panel de inicio de Forlex Optimizer con la salud del PC y el rendimiento en vivo"
+                                 width="1800" height="1136" fetchpriority="high" decoding="async">
+                        </div>
+
+                        <div class="float-card float-card--health" id="healthCard">
+                            <div class="ring" id="healthRing">
+                                <svg viewBox="0 0 52 52" aria-hidden="true">
+                                    <defs>
+                                        <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+                                            <stop offset="0" stop-color="#a78bfa"/>
+                                            <stop offset="1" stop-color="#22d3ee"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="track" cx="26" cy="26" r="22"/>
+                                    <circle class="bar" cx="26" cy="26" r="22"/>
+                                </svg>
+                                <span class="ring-num">80</span>
+                            </div>
+                            <div class="ring-meta">
+                                <span class="big">Salud del PC</span>
+                                <span class="small">Excelente</span>
+                            </div>
+                        </div>
+
+                        <div class="float-card float-card--tweaks" aria-hidden="true">
+                            <b>393</b><span>tweaks<em>16 categorías</em></span>
+                        </div>
+
+                        <div class="float-card float-card--safe" aria-hidden="true">
+                            <i class="fas fa-shield-halved"></i> 100% reversible
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STATS -->
+            <div class="stats" data-stagger>
+                <div class="stat">
+                    <div class="num" data-count="393">0</div>
+                    <div class="lbl">Tweaks incluidos</div>
+                </div>
+                <div class="stat">
+                    <div class="num" data-count="16">0</div>
+                    <div class="lbl">Categorías</div>
+                </div>
+                <div class="stat">
+                    <div class="num" data-count="31">0</div>
+                    <div class="lbl">Arreglos de 1 clic</div>
+                </div>
+                <div class="stat">
+                    <div class="num" data-count="100" data-suffix="%">0</div>
+                    <div class="lbl">Reversible</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ================= SOBRE MÍ ================= -->
+        <section class="section reveal" id="sobre-mi">
+            <h2 class="section-title"><i class="fas fa-user-astronaut"></i> Sobre mí</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <p class="text-secondary">
+                        Soy <strong>Forlex</strong>, desarrollador de bots de Discord, plugins de Minecraft y
+                        herramientas para Windows. Empecé como staff en comunidades de Minecraft en 2023 y desde
+                        entonces no he parado: fundé y llevé a su versión final <strong>Útil Bot</strong> (v3.0.3),
+                        soy <strong>CEO de PracPvP</strong> y creo <strong>Forlex Optimizer</strong>, un optimizador
+                        nativo con <strong>393 tweaks</strong> y reversión completa.
+                    </p>
+                    <p class="text-secondary">
+                        Me gusta construir cosas que cualquiera pueda usar sin complicaciones: que un jugador pueda
+                        optimizar su PC en un clic o que un servidor tenga sus sistemas funcionando el mismo día.
+                        Ahora mismo estoy abierto a <strong>trabajos de Minecraft de pago ($)</strong>.
+                    </p>
+                    <div class="chips">
+                        <div class="chip-row">
+                            <span class="chip"><i class="fab fa-discord"></i> Bots de Discord</span>
+                            <span class="chip"><i class="fas fa-cube"></i> Plugins de Minecraft</span>
+                            <span class="chip"><i class="fas fa-bolt"></i> Optimización Windows</span>
+                            <span class="chip"><i class="fas fa-code"></i> Java · C# · .NET</span>
+                            <span class="chip"><i class="fas fa-server"></i> Folia · Paper · Purpur</span>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="avail-card">
+                    <div class="avail-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>Disponible para trabajar</h3>
+                    <p>Encargos de Minecraft y desarrollo a medida. Trabajos de pago ($), presupuesto por proyecto.</p>
+                    <div class="price">$<small>por proyecto</small></div>
+                    <a class="btn btn--primary btn--sm" href="#contacto" data-sound="click"><i class="fab fa-discord"></i> Hablemos</a>
+                </aside>
+            </div>
+        </section>
+
+        <!-- ================= TRAYECTORIA ================= -->
+        <section class="section reveal" id="trayectoria">
+            <h2 class="section-title"><i class="fas fa-trophy"></i> Trayectoria</h2>
+            <p class="section-lead">Proyectos y equipos por los que he pasado desde 2023.</p>
+            <div class="experience-grid" data-stagger>
+                <article class="exp-card">
+                    <div class="role"><i class="fas fa-crown"></i> CEO &amp; Fundador</div>
+                    <div class="place">PracPvP</div>
+                    <div class="date"><i class="fas fa-calendar-alt"></i> 2026 - Actualidad</div>
+                    <p class="description">Servidor de práctica PvP con soporte Java y Bedrock, premium y no premium.</p>
+                </article>
+
+                <article class="exp-card">
+                    <div class="role"><i class="fas fa-bolt"></i> Developer &amp; Plugin Dev</div>
+                    <div class="place">Folia · Paper · Purpur <span class="status open">ACTIVO</span></div>
+                    <div class="date"><i class="fas fa-calendar-alt"></i> 2026 - Actualidad</div>
+                    <p class="description">Plugins y optimización de servidores para Folia, Paper y Purpur, con soporte multithreading de alto rendimiento.</p>
+                </article>
+
+                <article class="exp-card">
+                    <div class="role"><i class="fas fa-window-maximize"></i> Creador &amp; Developer</div>
+                    <div class="place">Forlex Optimizer <span class="status open">ACTIVO</span></div>
+                    <div class="date"><i class="fas fa-calendar-alt"></i> 2026 - Actualidad</div>
+                    <p class="description">Optimizador nativo para Windows 10/11: 393 tweaks, perfiles automáticos y reversión completa.</p>
+                </article>
+
+                <article class="exp-card closed-project">
+                    <div class="role"><i class="fas fa-robot"></i> CEO &amp; Fundador</div>
+                    <div class="place">Útil Bot <span class="status retired">CERRADO</span></div>
+                    <div class="date"><i class="fas fa-calendar-alt"></i> 2024 - 2025</div>
+                    <p class="description">Bot multifuncional para Discord, finalizado en su versión v3.0.3.</p>
+                </article>
+
+                <article class="exp-card">
+                    <div class="role"><i class="fas fa-crown"></i> Owner &amp; Fundador</div>
+                    <div class="place">SmatshMC <span class="status closed">CERRADO</span></div>
+                    <div class="date"><i class="fas fa-calendar-alt"></i> 2025 - 2026</div>
+                    <p class="description">Servidor de Minecraft con diversas modalidades. Actualmente cerrado.</p>
+                </article>
+
+                <article class="exp-card">
+                    <div class="role"><i class="fas fa-crown"></i> CEO &amp; Fundador</div>
+                    <div class="place">SpaceMain <span class="status closed">CERRADO</span></div>
+                    <div class="date"><i class="fas fa-calendar-alt"></i> 2024 - 2025</div>
+                    <p class="description">Servidor SMP con economía completa, sistema de clanes y eventos semanales.</p>
+                </article>
+
+                <article class="exp-card">
+                    <div class="role"><i class="fas fa-user-tie"></i> T-Mod</div>
+                    <div class="place">DeluxeZone · Practice</div>
+                    <div class="date"><i class="fas fa-calendar-alt"></i> 2024 - 2025</div>
+                    <p class="description">Staff encargado del área de Practice, moderación y asistencia a jugadores.</p>
+                </article>
+
+                <article class="exp-card">
+                    <div class="role"><i class="fas fa-hands-helping"></i> Helper</div>
+                    <div class="place">Volátik Survival 3.0</div>
+                    <div class="date"><i class="fas fa-calendar-alt"></i> 2023 - 2024</div>
+                    <p class="description">Asistencia a jugadores, moderación de chat y soporte en eventos.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= FORLEX OPTIMIZER ================= -->
+        <section class="section section--opt reveal" id="optimizer">
+            <span class="kicker"><i class="fas fa-bolt"></i> Producto · v1.0.0 · Windows</span>
+            <h2 class="opt-title">Forlex Optimizer</h2>
+            <p class="section-lead">
+                Un optimizador nativo para Windows 10/11 con <strong>393 tweaks en 16 categorías</strong>.
+                Aplica, mide y revierte todo con el mismo botón: cada cambio guarda el valor exacto anterior,
+                así que nada se queda "tocado" para siempre.
+            </p>
+
+            <div class="opt-head">
+                <div>
+                    <p class="text-secondary" style="margin-bottom:14px">
+                        Hecho en C# + WPF (.NET Framework 4.8), portable y ligero: <strong>2.32 MB</strong>, sin
+                        instalador, sin cuentas y sin telemetría. Todo ocurre en tu PC y cada operación queda
+                        respaldada en <code style="font-family:'JetBrains Mono',monospace;font-size:0.85em;color:#c4b5fd">%LOCALAPPDATA%\ForlexOptimizer</code>.
+                    </p>
+                    <div class="opt-tags">
+                        <span class="opt-tag"><i class="fas fa-layer-group"></i> 393 tweaks</span>
+                        <span class="opt-tag"><i class="fas fa-table-cells-large"></i> 16 categorías</span>
+                        <span class="opt-tag"><i class="fas fa-rotate-left"></i> Reversión total</span>
+                        <span class="opt-tag"><i class="fas fa-bolt"></i> Perfiles automáticos</span>
+                        <span class="opt-tag opt-tag--safe"><i class="fas fa-shield-halved"></i> 0/71 VirusTotal</span>
+                        <span class="opt-tag opt-tag--safe"><i class="fas fa-code-branch"></i> Código libre (MIT)</span>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn--violet" href="#descargar" data-sound="click"><i class="fas fa-download"></i> Descargar ahora</a>
+                        <a class="btn btn--ghost" href="https://github.com/zforlexx/forlex" target="_blank" rel="noopener" data-sound="click"><i class="fab fa-github"></i> Ver en GitHub</a>
+                    </div>
+                </div>
+
+                <aside class="quick-dl">
+                    <h3><i class="fas fa-box-open" style="color:#a78bfa;margin-right:7px"></i> Ficha rápida</h3>
+                    <p>Descarga directa desde GitHub, nunca desde mi PC.</p>
+                    <div class="row"><span>Versión</span><b>1.0.0</b></div>
+                    <div class="row"><span>Tamaño</span><b>2.32 MB</b></div>
+                    <div class="row"><span>Sistema</span><b>Windows 10/11 · 64-bit</b></div>
+                    <div class="row"><span>Licencia</span><b>MIT</b></div>
+                    <div class="row"><span>VirusTotal</span><span class="ok"><i class="fas fa-circle-check"></i> 0/71</span></div>
+                    <a class="btn btn--violet btn--block btn--sm" href="https://github.com/zforlexx/forlex/releases/latest/download/ForlexOptimizer.exe" data-sound="click">
+                        <i class="fas fa-arrow-down-long"></i> ForlexOptimizer.exe
+                    </a>
+                    <div class="mini-links">
+                        <a href="https://github.com/zforlexx/forlex/releases" target="_blank" rel="noopener"><i class="fas fa-tags"></i> Releases</a>
+                        <a href="https://www.virustotal.com/gui/file/17aab74c46f2bf0aea87fdae6a96d32868c18d2011cd38be7a85f107ef9b859c" target="_blank" rel="noopener"><i class="fas fa-shield-halved"></i> VirusTotal</a>
+                        <a href="#descargar"><i class="fas fa-download"></i> Descargas</a>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- FEATURES -->
+            <div class="feature-grid" data-stagger style="margin-top:28px">
+                <div class="feature">
+                    <div class="feature__icon"><i class="fas fa-layer-group"></i></div>
+                    <h4>393 tweaks · 16 categorías</h4>
+                    <p>Rendimiento FPS, GPU, red, CPU/RAM, energía, privacidad, almacenamiento, periféricos y más.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature__icon"><i class="fas fa-rotate-left"></i></div>
+                    <h4>Aplicar y revertir</h4>
+                    <p>Antes de tocar el registro se guarda el valor exacto. "Deshacer" lo restaura tal cual estaba.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature__icon"><i class="fas fa-clock-rotate-left"></i></div>
+                    <h4>Punto de restauración</h4>
+                    <p>Puedes crear un punto de restauración de Windows antes de aplicar cualquier cambio.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature__icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+                    <h4>Optimizar todo</h4>
+                    <p>Perfiles Competitivo, Streaming y Notebook en un clic. Los tweaks riesgosos nunca se aplican solos.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature__icon"><i class="fas fa-gamepad"></i></div>
+                    <h4>Modo Juego automático</h4>
+                    <p>Detecta tu biblioteca de Steam, Epic o Battle.net: aplica el perfil al abrir el juego y revierte al cerrarlo.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature__icon"><i class="fas fa-display"></i></div>
+                    <h4>Optimizar gráfica</h4>
+                    <p>Detecta NVIDIA, AMD o Intel, aplica ajustes con respaldo y permite restaurarlos después.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature__icon"><i class="fas fa-stethoscope"></i></div>
+                    <h4>Chequeo de PC y pruebas</h4>
+                    <p>Salud del equipo, cuello de botella, driver de GPU, Hz reales del mouse, CPS, ping y más.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature__icon"><i class="fas fa-crosshairs"></i></div>
+                    <h4>Forlex Games</h4>
+                    <p>Aim trainer con 7 modos, mira overlay, widget flotante, test de escritura y conversor de sensibilidad.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature__icon"><i class="fas fa-palette"></i></div>
+                    <h4>Personalización total</h4>
+                    <p>5 temas, color de acento, fondos, densidad, perfil con nivel, logros y ajustes exportables.</p>
+                </div>
+            </div>
+
+            <!-- GALERÍA -->
+            <div class="gallery" id="galeria">
+                <div class="cat-head" style="margin-top:26px">
+                    <h3><i class="fas fa-images" style="color:#a78bfa;margin-right:8px"></i> Así se ve por dentro</h3>
+                    <span>17 capturas reales del programa</span>
+                </div>
+
+                <div class="gallery-tabs" id="galleryTabs" role="tablist" aria-label="Capturas de Forlex Optimizer">
+                    <button class="gal-tab active" role="tab" aria-selected="true" data-src="assets/img/inicio.webp" data-cap="Inicio · salud del PC, rendimiento en vivo y acceso rápido"><i class="fas fa-house"></i> Inicio</button>
+                    <button class="gal-tab" role="tab" aria-selected="false" data-src="assets/img/tweaks.webp" data-cap="Tweaks · catálogo completo con búsqueda, filtros y nivel de riesgo"><i class="fas fa-list-check"></i> Tweaks</button>
+                    <button class="gal-tab" role="tab" aria-selected="false" data-src="assets/img/optimizeall.webp" data-cap="Optimizar todo · perfiles Competitivo, Streaming y Notebook"><i class="fas fa-wand-magic-sparkles"></i> Optimizar todo</button>
+                    <button class="gal-tab" role="tab" aria-selected="false" data-src="assets/img/gpu.webp" data-cap="Optimizar gráfica · NVIDIA, AMD e Intel con respaldo"><i class="fas fa-display"></i> Gráfica</button>
+                    <button class="gal-tab" role="tab" aria-selected="false" data-src="assets/img/gamemode.webp" data-cap="Modo Juego · perfiles automáticos por juego"><i class="fas fa-gamepad"></i> Modo Juego</button>
+                    <button class="gal-tab" role="tab" aria-selected="false" data-src="assets/img/games.webp" data-cap="Forlex Games · aim trainer, mira overlay y más"><i class="fas fa-crosshairs"></i> Forlex Games</button>
+                    <button class="gal-tab" role="tab" aria-selected="false" data-src="assets/img/tests.webp" data-cap="Pruebas · mouse, teclado, monitor, ping y benchmarks"><i class="fas fa-gauge-high"></i> Pruebas</button>
+                    <button class="gal-tab" role="tab" aria-selected="false" data-src="assets/img/backups.webp" data-cap="Backups y deshacer · historial de todo lo aplicado"><i class="fas fa-clock-rotate-left"></i> Backups</button>
+                    <button class="gal-tab" role="tab" aria-selected="false" data-src="assets/img/customize.webp" data-cap="Personalizar · 5 temas, acento, fondos y densidad"><i class="fas fa-palette"></i> Personalizar</button>
+                    <button class="gal-tab" role="tab" aria-selected="false" data-src="assets/img/equipo.webp" data-cap="Mi equipo · hardware, monitor y salud en detalle"><i class="fas fa-laptop"></i> Mi equipo</button>
+                    <button class="gal-tab" role="tab" aria-selected="false" data-src="assets/img/hardware.webp" data-cap="Hardware · RAM, pantalla y sistema al detalle"><i class="fas fa-microchip"></i> Hardware</button>
+                    <button class="gal-tab" role="tab" aria-selected="false" data-src="assets/img/cleaner.webp" data-cap="Limpieza y reparación · SFC, DISM y espacio en disco"><i class="fas fa-broom"></i> Limpieza</button>
+                    <button class="gal-tab" role="tab" aria-selected="false" data-src="assets/img/fixes.webp" data-cap="Arreglos de un clic · 31 soluciones a problemas típicos"><i class="fas fa-screwdriver-wrench"></i> Arreglos</button>
+                    <button class="gal-tab" role="tab" aria-selected="false" data-src="assets/img/powerplan.webp" data-cap="Planes de energía · Forlex Rendimiento, Notebook Gamer, Silencioso"><i class="fas fa-battery-full"></i> Energía</button>
+                    <button class="gal-tab" role="tab" aria-selected="false" data-src="assets/img/programs.webp" data-cap="Programas · desinstalador, inicio y recomendados"><i class="fas fa-box-open"></i> Programas</button>
+                    <button class="gal-tab" role="tab" aria-selected="false" data-src="assets/img/diagnose.webp" data-cap="Chequeo de PC · puntaje de salud y problemas accionables"><i class="fas fa-stethoscope"></i> Diagnóstico</button>
+                    <button class="gal-tab" role="tab" aria-selected="false" data-src="assets/img/assistant.webp" data-cap="Asistente offline · ayuda integrada sin conexión"><i class="fas fa-comment-dots"></i> Asistente</button>
+                </div>
+
+                <figure class="gallery-stage" id="galleryStage">
+                    <img id="galleryImg" src="assets/img/inicio.webp"
+                         alt="Captura de la pantalla de inicio de Forlex Optimizer"
+                         loading="lazy" decoding="async" width="1600" height="1010">
+                    <button class="gal-arrow gal-arrow--prev" id="galPrev" type="button" aria-label="Captura anterior"><i class="fas fa-chevron-left"></i></button>
+                    <button class="gal-arrow gal-arrow--next" id="galNext" type="button" aria-label="Captura siguiente"><i class="fas fa-chevron-right"></i></button>
+                    <figcaption class="gal-caption">
+                        <span id="galleryCap">Inicio · salud del PC, rendimiento en vivo y acceso rápido</span>
+                        <span class="zoom-hint"><i class="fas fa-magnifying-glass-plus"></i> Clic para ampliar</span>
+                    </figcaption>
+                </figure>
+
+                <div class="gallery-thumbs" id="galleryThumbs" aria-label="Miniaturas de capturas"></div>
+            </div>
+
+            <!-- CATEGORÍAS -->
+            <div class="categories">
+                <div class="cat-head">
+                    <h3><i class="fas fa-table-cells-large" style="color:#a78bfa;margin-right:8px"></i> 16 categorías · 393 ajustes</h3>
+                    <span><b>154</b> activos ahora mismo en el equipo de pruebas</span>
+                </div>
+                <div class="cat-marquee" aria-hidden="true">
+                    <div class="cat-track" id="catTrack">
+                        <span class="cat-pill"><i class="fas fa-person-running"></i> Rendimiento FPS <b>28</b></span>
+                        <span class="cat-pill"><i class="fas fa-display"></i> Gráfica (GPU) <b>19</b></span>
+                        <span class="cat-pill"><i class="fas fa-wifi"></i> Red y WiFi <b>42</b></span>
+                        <span class="cat-pill"><i class="fas fa-microchip"></i> CPU y memoria <b>20</b></span>
+                        <span class="cat-pill"><i class="fas fa-bolt"></i> Energía <b>17</b></span>
+                        <span class="cat-pill"><i class="fab fa-windows"></i> Windows <b>37</b></span>
+                        <span class="cat-pill"><i class="fas fa-paint-brush"></i> Personalizar Windows <b>37</b></span>
+                        <span class="cat-pill"><i class="fas fa-layer-group"></i> Segundo plano <b>40</b></span>
+                        <span class="cat-pill"><i class="fas fa-user-secret"></i> Privacidad <b>42</b></span>
+                        <span class="cat-pill"><i class="fas fa-hard-drive"></i> Almacenamiento <b>12</b></span>
+                        <span class="cat-pill"><i class="fas fa-mouse"></i> Periféricos <b>20</b></span>
+                        <span class="cat-pill"><i class="fas fa-microchip"></i> BIOS y drivers <b>5</b></span>
+                        <span class="cat-pill"><i class="fas fa-gamepad"></i> Priorizar juegos <b>20</b></span>
+                        <span class="cat-pill"><i class="fas fa-rocket"></i> Optimizar apps <b>12</b></span>
+                        <span class="cat-pill"><i class="fas fa-keyboard"></i> Accesos directos <b>10</b></span>
+                        <span class="cat-pill"><i class="fas fa-computer-mouse"></i> Drivers de mouse <b>32</b></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONFIANZA -->
+            <div class="trust-grid">
+                <div class="vt-card">
+                    <div>
+                        <h3><i class="fas fa-shield-halved"></i> Verificado en VirusTotal</h3>
+                        <p>
+                            <strong>0 de 71</strong> motores marcan el ejecutable como malicioso. Puedes abrir el
+                            análisis completo por su hash SHA-256 y comprobarlo tú mismo antes de descargar.
+                        </p>
+                    </div>
+                    <div class="vt-score">
+                        <span class="big">0/71</span>
+                        <span class="lbl">Detecciones</span>
+                        <a href="https://www.virustotal.com/gui/file/17aab74c46f2bf0aea87fdae6a96d32868c18d2011cd38be7a85f107ef9b859c" target="_blank" rel="noopener">Ver análisis <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                    <button class="vt-shot" type="button" data-lightbox="assets/img/virustotal.webp" data-caption="Análisis de VirusTotal · 0/71 detecciones" aria-label="Ampliar captura de VirusTotal">
+                        <img src="assets/img/virustotal.webp" alt="Análisis de VirusTotal del archivo ForlexOptimizer.exe sin detecciones" loading="lazy" decoding="async">
+                    </button>
+                </div>
+
+                <div class="checks">
+                    <div class="check">
+                        <i class="fas fa-rotate-left"></i>
+                        <div>
+                            <h4>Todo reversible</h4>
+                            <p>Cada tweak guarda el valor anterior exacto. Si algo no te convence, lo deshaces y queda como estaba.</p>
+                        </div>
+                    </div>
+                    <div class="check">
+                        <i class="fas fa-user-secret"></i>
+                        <div>
+                            <h4>Sin telemetría</h4>
+                            <p>No hay servidores propios ni conexiones de fondo: la app funciona 100% local, incluso sin internet.</p>
+                        </div>
+                    </div>
+                    <div class="check">
+                        <i class="fas fa-clock-rotate-left"></i>
+                        <div>
+                            <h4>Backups y restauración</h4>
+                            <p>Los cambios quedan respaldados en <code>%LOCALAPPDATA%\ForlexOptimizer\backups</code>.</p>
+                        </div>
+                    </div>
+                    <div class="check">
+                        <i class="fas fa-code-branch"></i>
+                        <div>
+                            <h4>Proyecto abierto</h4>
+                            <p>Licencia MIT y código disponible en GitHub. Puedes revisar, compilar o proponer cambios.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DESCARGA -->
+            <div class="dl-card" id="descargar">
+                <div class="dl-grid">
+                    <div>
+                        <h3>Descarga <span>Forlex Optimizer</span></h3>
+                        <p class="dl-sub">
+                            Gratis, portable y sin instalador. El archivo se sirve desde
+                            <strong>GitHub</strong> (nunca desde mi PC), así que puedes descargarlo sin que nadie
+                            se conecte a nada.
+                        </p>
+
+                        <div class="dl-buttons">
+                            <a class="dl-btn dl-btn--primary" href="https://github.com/zforlexx/forlex/releases/latest/download/ForlexOptimizer.exe"
+                               target="_blank" rel="noopener" data-sound="click">
+                                <span class="dl-btn__icon"><i class="fab fa-windows"></i></span>
+                                <span class="dl-btn__txt">
+                                    <strong>ForlexOptimizer.exe</strong>
+                                    <span>Windows 10/11 · 64 bits · portable</span>
+                                </span>
+                                <span class="dl-btn__meta">2.32 MB</span>
+                                <i class="fas fa-arrow-down-long"></i>
+                            </a>
+                            <a class="dl-btn" href="https://github.com/zforlexx/forlex/releases/latest/download/ForlexOptimizer-1.0.0-portable.zip"
+                               target="_blank" rel="noopener" data-sound="click">
+                                <span class="dl-btn__icon"><i class="fas fa-file-zipper"></i></span>
+                                <span class="dl-btn__txt">
+                                    <strong>Versión portable (.zip)</strong>
+                                    <span>Incluye lanzador, instalador y documentación</span>
+                                </span>
+                                <span class="dl-btn__meta">1.48 MB</span>
+                                <i class="fas fa-arrow-down-long"></i>
+                            </a>
+                        </div>
+
+                        <div class="hash-box">
+                            <span class="hash-label">SHA-256</span>
+                            <code class="hash-code" id="hashCode">17aab74c46f2bf0aea87fdae6a96d32868c18d2011cd38be7a85f107ef9b859c</code>
+                            <button class="copy-mini" type="button" data-copy="17aab74c46f2bf0aea87fdae6a96d32868c18d2011cd38be7a85f107ef9b859c" aria-label="Copiar hash SHA-256"><i class="fas fa-copy"></i></button>
+                        </div>
+
+                        <div class="req-row">
+                            <span class="req"><i class="fab fa-windows"></i> Windows 10/11</span>
+                            <span class="req"><i class="fas fa-microchip"></i> 64 bits</span>
+                            <span class="req"><i class="fas fa-shield-halved"></i> Requiere administrador</span>
+                            <span class="req"><i class="fas fa-plug"></i> Sin instalación</span>
+                        </div>
+
+                        <div class="smart-note">
+                            <i class="fas fa-triangle-exclamation"></i>
+                            <div>
+                                <h4>¿Windows avisa que no es seguro?</h4>
+                                <p>
+                                    Es normal: el archivo no tiene un certificado comercial de firma. Si SmartScreen
+                                    lo bloquea, pulsa <strong>"Más información"</strong> y luego
+                                    <strong>"Ejecutar de todas formas"</strong>. El análisis de VirusTotal está arriba
+                                    para que lo verifiques por hash.
+                                </p>
+                            </div>
+                        </div>
+
+                        <p style="margin-top:12px;font-size:0.68rem;color:#8d87ad">
+                            <i class="fas fa-circle-info" style="color:#a78bfa"></i>
+                            Es un optimizador real: aplica cambios de registro y servicios. Léelo, prueba los tweaks
+                            seguros primero y crea un punto de restauración si quieres ir sobre seguro.
+                        </p>
+                    </div>
+
+                    <div class="steps">
+                        <div class="step">
+                            <span class="step-num">1</span>
+                            <div>
+                                <h4>Descarga el .exe</h4>
+                                <p>Pulsa el botón principal. GitHub te entrega el archivo original (2.32 MB) con su hash SHA-256.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span class="step-num">2</span>
+                            <div>
+                                <h4>Ejecútalo como administrador</h4>
+                                <p>Optimizar servicios y registro necesita permisos de administrador. No requiere instalación.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span class="step-num">3</span>
+                            <div>
+                                <h4>Elige perfil o tweaks</h4>
+                                <p>"Optimizar todo" aplica un perfil completo; también puedes ir tweak por tweak con su nivel de riesgo.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span class="step-num">4</span>
+                            <div>
+                                <h4>Deshaz cuando quieras</h4>
+                                <p>Desde Backups o con el mismo botón devuelves cada cambio. Tu PC no queda "secuestrada".</p>
+                            </div>
+                        </div>
+                        <div class="smart-note" style="border-left-color:#22d3ee;border-color:rgba(34,211,238,.3);background:linear-gradient(135deg,rgba(34,211,238,.08),rgba(10,9,20,.4))">
+                            <i class="fas fa-question" style="color:#22d3ee"></i>
+                            <div>
+                                <h4 style="color:#a5f3fc">¿Dudas antes de descargar?</h4>
+                                <p>Escríbeme por Discord (<strong>zforlex</strong>) y te digo qué perfil te conviene según tu equipo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="faq" id="faq">
+                <div class="faq-item">
+                    <button class="faq-q" type="button" aria-expanded="false">
+                        ¿Forlex Optimizer es realmente gratis?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-a"><p>Sí. Es un proyecto con licencia MIT: puedes descargarlo, usarlo y ver el código sin pagar nada. Si te sirve, la mejor forma de apoyar es compartirlo.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" type="button" aria-expanded="false">
+                        ¿Qué diferencia hay entre el .exe y el .zip?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-a"><p>El <code>.exe</code> es el programa suelto: lo ejecutas y listo. El <code>.zip</code> es el paquete portable completo con el lanzador, los scripts de instalación, la licencia y la documentación. Si tienes Smart App Control activo, usa el lanzador del zip (un doble clic en <code>ForlexOptimizer.cmd</code>).</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" type="button" aria-expanded="false">
+                        ¿Windows Defender o SmartScreen lo bloquea?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-a"><p>Puede avisar porque no tiene firma comercial, no porque tenga algo malo. El análisis de VirusTotal muestra <strong>0/71</strong> detecciones y puedes comprobar el hash antes de abrirlo. Pulsa "Más información" → "Ejecutar de todas formas".</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" type="button" aria-expanded="false">
+                        ¿Puede romper mi PC o dejarla peor?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-a"><p>Todos los cambios se respaldan valor por valor y se revierten con el mismo botón. Los tweaks marcados como "Riesgoso" nunca se aplican automáticamente. Aun así, es un optimizador: usa los ajustes seguros primero y crea un punto de restauración si quieres cero riesgos.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" type="button" aria-expanded="false">
+                        ¿Funciona en Windows 10?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-a"><p>Sí. Está hecho para Windows 10 y Windows 11 de 64 bits. Necesita permisos de administrador para aplicar la mayoría de tweaks de sistema.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" type="button" aria-expanded="false">
+                        ¿Envía mis datos a algún lado?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-a"><p>No. No hay telemetría ni servidores propios: la app lee tu hardware con WMI y aplica cambios locales. Tus backups y ajustes se guardan en <code>%LOCALAPPDATA%\ForlexOptimizer</code>.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ÚTIL BOT ================= -->
+        <section class="section reveal is-closed" id="util-bot">
+            <div class="ribbon" aria-hidden="true"><span><i class="fas fa-lock"></i>Cerrado</span></div>
+
+            <h2 class="section-title"><i class="fas fa-robot"></i> Útil Bot — CEO</h2>
+
+            <p class="text-secondary" style="margin-bottom:6px">
+                <span class="status open" style="margin-left:0">v3.0.3</span>
+                <span class="status retired">CERRADO</span>
+                <span>Bot multifuncional con configuración sencilla, sin necesidad de conocimientos técnicos.</span>
+                <span style="display:block;margin-top:12px;font-size:0.8rem;color:var(--text-dim)">
+                    Proyecto finalizado — el desarrollo y el servicio quedaron descontinuados.
+                </span>
+            </p>
+
+            <div class="close-card">
+                <i class="fas fa-circle-info"></i>
+                <div>
+                    <h4>Este proyecto ya no está disponible</h4>
+                    <p>
+                        <strong>Útil Bot</strong> llegó a su versión <strong>v3.0.3</strong> y cerró de forma
+                        definitiva: ya no se aceptan nuevas invitaciones ni se ofrece soporte del bot.
+                        La información queda aquí como parte de mi trayectoria; si buscas algo parecido o
+                        algo a medida, escríbeme y lo hablamos.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bot-features" data-stagger>
+                <div class="bot-feature"><i class="fas fa-ticket-alt"></i><h4>Tickets</h4><p>Personalizables</p></div>
+                <div class="bot-feature"><i class="fas fa-gavel"></i><h4>Moderación</h4><p>Warn, Mute, Ban</p></div>
+                <div class="bot-feature"><i class="fas fa-chalkboard"></i><h4>Bienvenidas</h4><p>Autoroles</p></div>
+                <div class="bot-feature"><i class="fas fa-chart-line"></i><h4>Staff Ranking</h4><p>Calificaciones</p></div>
+                <div class="bot-feature"><i class="fas fa-gift"></i><h4>Sorteos</h4><p>Personalizados</p></div>
+                <div class="bot-feature"><i class="fas fa-shield-alt"></i><h4>Anti-links</h4><p>Filtro palabras</p></div>
+                <div class="bot-feature"><i class="fas fa-sort-numeric-up"></i><h4>Contador</h4><p>Juego numérico</p></div>
+                <div class="bot-feature"><i class="fas fa-palette"></i><h4>Panel Roles</h4><p>Autogestionable</p></div>
+            </div>
+
+            <div class="btn-group">
+                <span class="closed-btn" role="note" aria-label="Útil Bot está cerrado">
+                    <i class="fas fa-lock"></i> Bot cerrado
+                </span>
+            </div>
+            <p class="util-note">
+                <i class="fas fa-comment-dots"></i>
+                ¿Buscas un bot parecido o algo a medida? Escríbeme por Discord:
+                <a href="#contacto">zforlex</a>.
+            </p>
+        </section>
+
+        <!-- ================= PRACPVP ================= -->
+        <section class="section reveal" id="pracpvp">
+            <h2 class="section-title"><i class="fas fa-crosshairs"></i> PracPvP — CEO</h2>
+            <p class="section-lead">Servidor de práctica PvP con soporte Java y Bedrock, premium y no premium.</p>
+            <div class="server-grid" data-stagger>
+                <div class="server-card">
+                    <h3><i class="fas fa-server"></i> IP del Servidor</h3>
+                    <div class="ip-box">
+                        <span class="ip" id="serverIp">pracpvp.us</span>
+                        <button class="copy-btn" type="button" data-copy="pracpvp.us" data-sound="click"
+                                aria-label="Copiar IP del servidor"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <div class="bedrock-port">
+                        <i class="fas fa-mobile-alt"></i> Puerto Bedrock: <strong>25573</strong>
+                    </div>
+                    <div class="tag-row">
+                        <span class="tag">Java</span>
+                        <span class="tag">Bedrock</span>
+                        <span class="tag">Premium</span>
+                        <span class="tag">No premium</span>
+                    </div>
+                </div>
+
+                <div class="server-card">
+                    <h3><i class="fab fa-discord"></i> Discord Oficial</h3>
+                    <div class="discord-big"><i class="fab fa-discord"></i></div>
+                    <p class="server-meta">Comunidad activa, soporte, eventos y anuncios de PracPvP.</p>
+                    <a href="https://discord.gg/7CREsH6bR4" target="_blank" rel="noopener"
+                       class="discord-link" data-sound="click"><i class="fab fa-discord"></i> Unirse al Discord</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACTO ================= -->
+        <section class="section reveal" id="contacto">
+            <h2 class="section-title"><i class="fas fa-paper-plane"></i> Contacto</h2>
+            <p class="section-lead">Para dudas del optimizador, soporte de PracPvP o encargos de Minecraft.</p>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="icon"><i class="fab fa-discord"></i></div>
+                    <p style="font-size:1.05rem"><strong>Discord</strong></p>
+                    <div class="handle" data-copy="zforlex" data-sound="click" role="button" tabindex="0"
+                         aria-label="Copiar usuario de Discord zforlex">
+                        <span>zforlex</span>
+                        <button class="copy-btn" type="button" tabindex="-1" aria-hidden="true"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <div class="contact-buttons">
+                        <a href="https://discord.gg/7CREsH6bR4" target="_blank" rel="noopener"
+                           class="contact-btn" data-sound="click"><i class="fab fa-discord"></i> PracPvP</a>
+                        <a href="https://github.com/zforlexx/forlex" target="_blank" rel="noopener"
+                           class="contact-btn contact-btn--ghost" data-sound="click"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                    <p style="margin-top:14px;font-size:0.7rem;color:var(--text-dim)">
+                        <i class="fas fa-copy"></i> Toca el usuario para copiarlo.
+                    </p>
+                </div>
+
+                <div class="work-card">
+                    <div class="wc-top">
+                        <div class="wc-icon"><i class="fas fa-cube"></i></div>
+                        <div>
+                            <h3>Trabajos de Minecraft</h3>
+                            <span class="wc-tag">Disponible ahora · $</span>
+                        </div>
+                    </div>
+                    <p>Estoy tomando encargos de Minecraft y desarrollo a medida. Trabajos de pago ($), con presupuesto según el proyecto.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Plugins para Folia, Paper y Purpur</li>
+                        <li><i class="fas fa-check"></i> Configuración y setup de servidores</li>
+                        <li><i class="fas fa-check"></i> Optimización y rendimiento</li>
+                        <li><i class="fas fa-check"></i> Bots de Discord a medida</li>
+                    </ul>
+                    <div class="price-line">
+                        <strong>$</strong>
+                        <span>Presupuesto por proyecto</span>
+                        <button class="btn btn--primary btn--sm" type="button" data-copy="zforlex" data-sound="click">
+                            <i class="fab fa-discord"></i> Copiar mi Discord
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="footer reveal">
+            <div class="fname">FORLEX</div>
+            <p>© <span id="year">2026</span> Forlex — Creador de Forlex Optimizer · CEO de PracPvP · Útil Bot <span style="opacity:.7">(cerrado)</span></p>
+            <div class="footer-links">
+                <a href="https://github.com/zforlexx/forlex" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#descargar"><i class="fas fa-download"></i> Descargar Optimizer</a>
+                <a href="https://www.virustotal.com/gui/file/17aab74c46f2bf0aea87fdae6a96d32868c18d2011cd38be7a85f107ef9b859c" target="_blank" rel="noopener"><i class="fas fa-shield-halved"></i> VirusTotal</a>
+                <a href="#contacto"><i class="fab fa-discord"></i> Discord</a>
+            </div>
+            <p class="fmeta"><i class="fas fa-server"></i> Sitio alojado en GitHub Pages · Ningún dato se envía a mi PC</p>
+        </footer>
+    </main>
+
+    <script src="assets/js/site.js" defer></script>
+</body>
+</html>

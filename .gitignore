@@ -1,0 +1,8 @@
+_qa/
+_qa_preview.html
+src-images/
+_deploy/
+node_modules/
+__pycache__/
+*.log
+*.tmp
