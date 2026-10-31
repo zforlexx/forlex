@@ -1,3 +1,22 @@
+/* ---------- TIPOGRAFÍAS LOCALES (sin CDN) ---------- */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('../fonts/inter-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 100 800;
+    font-display: swap;
+    src: url('../fonts/jetbrains-mono-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* ============================================================
    FORLEX · sitio personal + Forlex Optimizer
    Tema: bosque esmeralda + cian · zona producto: violeta
@@ -1085,7 +1104,7 @@ code { overflow-wrap: anywhere; word-break: break-word; }
 
 .feature:hover .feature__icon { transform: translateY(-2px) rotate(-6deg) scale(1.08); box-shadow: var(--glow-violet); }
 
-.feature h4 { font-size: 0.88rem; font-weight: 800; margin-bottom: 4px; letter-spacing: -0.005em; }
+.feature h3 { font-size: 0.88rem; font-weight: 800; margin-bottom: 4px; letter-spacing: -0.005em; }
 .feature p { font-size: 0.72rem; color: #a9a3c9; line-height: 1.55; }
 
 /* ============================================================
@@ -1318,7 +1337,7 @@ code { overflow-wrap: anywhere; word-break: break-word; }
     border: 1px solid rgba(139, 92, 246, 0.3);
 }
 
-.check h4 { font-size: 0.8rem; font-weight: 800; margin-bottom: 2px; }
+.check h3 { font-size: 0.8rem; font-weight: 800; margin-bottom: 2px; }
 .check p { font-size: 0.7rem; color: #a9a3c9; line-height: 1.5; }
 
 /* ============================================================
@@ -1434,7 +1453,7 @@ code { overflow-wrap: anywhere; word-break: break-word; }
     box-shadow: 0 6px 16px -8px rgba(139, 92, 246, 0.9);
 }
 
-.step h4 { font-size: 0.8rem; font-weight: 800; margin-bottom: 2px; }
+.step h3 { font-size: 0.8rem; font-weight: 800; margin-bottom: 2px; }
 .step p { font-size: 0.7rem; color: #a9a3c9; line-height: 1.55; }
 
 .smart-note {
@@ -1448,7 +1467,7 @@ code { overflow-wrap: anywhere; word-break: break-word; }
 }
 
 .smart-note i { color: var(--warning); font-size: 0.95rem; margin-top: 2px; flex: 0 0 auto; }
-.smart-note h4 { font-size: 0.78rem; font-weight: 800; color: #fde68a; margin-bottom: 3px; }
+.smart-note h3 { font-size: 0.78rem; font-weight: 800; color: #fde68a; margin-bottom: 3px; }
 .smart-note p { font-size: 0.7rem; color: #d6c9a8; line-height: 1.55; }
 .smart-note a { color: #fde68a; }
 
@@ -1568,7 +1587,7 @@ code { overflow-wrap: anywhere; word-break: break-word; }
     color: #fca5a5; background: rgba(239, 68, 68, 0.14);
     border: 1px solid rgba(239, 68, 68, 0.32);
 }
-.close-card h4 { font-size: 0.92rem; font-weight: 800; letter-spacing: 0.01em; margin-bottom: 5px; color: #fecaca; }
+.close-card h3 { font-size: 0.92rem; font-weight: 800; letter-spacing: 0.01em; margin-bottom: 5px; color: #fecaca; }
 .close-card p { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.62; }
 .close-card strong { color: var(--text-primary); }
 .close-card a { color: #fca5a5; }
@@ -1598,7 +1617,7 @@ code { overflow-wrap: anywhere; word-break: break-word; }
 }
 
 .bot-feature:hover i { transform: translateY(-3px) scale(1.16) rotate(-6deg); color: var(--accent-glow); }
-.bot-feature h4 { color: var(--text-primary); font-size: 0.82rem; margin-bottom: 2px; font-weight: 700; }
+.bot-feature h3 { color: var(--text-primary); font-size: 0.82rem; margin-bottom: 2px; font-weight: 700; }
 .bot-feature p { font-size: 0.64rem; color: var(--text-dim); }
 
 .bot-feature::after {
@@ -2002,6 +2021,45 @@ code { overflow-wrap: anywhere; word-break: break-word; }
     .modal-content { max-height: 70vh; }
 }
 
+/* ============================================================
+   SKIP LINK + VISTA PREVIA DE CATEGORÍAS
+   ============================================================ */
+.skip-link {
+    position: fixed; top: -70px; left: 16px; z-index: 200;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #032019; font-weight: 800; font-size: 0.8rem;
+    padding: 10px 18px; border-radius: 0 0 12px 12px;
+    text-decoration: none;
+    transition: top 0.25s var(--ease-out);
+}
+
+.skip-link:focus { top: 0; }
+
+.cat-preview {
+    display: flex; align-items: center; gap: 16px;
+    margin-top: 16px;
+    background: rgba(15, 14, 32, 0.6);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: var(--radius-md);
+    padding: 14px;
+}
+
+.cat-preview img {
+    flex: 0 0 118px; width: 118px; height: 190px;
+    object-fit: cover; object-position: top center;
+    border-radius: 12px;
+    border: 1px solid rgba(139, 92, 246, 0.32);
+    box-shadow: var(--shadow-md);
+}
+
+.cat-preview p { font-size: 0.74rem; color: #a9a3c9; line-height: 1.65; }
+.cat-preview p i { color: var(--violet-light); margin-right: 7px; }
+.cat-preview p strong { color: #e7e3f8; }
+
+@media (min-width: 640px) {
+    .cat-preview img { flex-basis: 150px; width: 150px; height: 220px; }
+    .cat-preview p { font-size: 0.8rem; }
+}
 /* ============================================================
    ACCESIBILIDAD DE MOVIMIENTO
    ============================================================ */

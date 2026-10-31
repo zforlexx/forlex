@@ -729,6 +729,12 @@
     }
 
     if (galleryTabs.length) {
+        if (galleryStage) {
+            galleryStage.setAttribute('role', 'tabpanel');
+            galleryStage.setAttribute('aria-label', 'Captura de Forlex Optimizer seleccionada');
+        }
+        galleryTabs.forEach(function (tab) { tab.setAttribute('aria-controls', 'galleryStage'); });
+
         galleryTabs.forEach(function (tab, i) {
             tab.addEventListener('click', function () {
                 if (i === galleryIndex) {

@@ -62,7 +62,7 @@ sha256sum -c SHA256SUMS.txt
 - **Optimizar todo**: perfiles Competitivo, Streaming y Notebook en un clic (los tweaks riesgosos nunca se
   aplican automáticamente).
 - **Optimizar gráfica**: detección de NVIDIA / AMD / Intel, con respaldo y restauración de los ajustes.
-- **Modo Juego automático**: detecta la biblioteca de Steam/Epic, aplica el perfil al abrir el juego,
+- **Modo Juego automático**: detecta la biblioteca de Steam, Epic o Battle.net, aplica el perfil al abrir el juego,
   revierte al cerrarlo y guarda el historial de sesiones.
 - **Planes de energía**: perfiles propios (Forlex Rendimiento, Notebook Gamer, Silencioso) y control de los
   planes de Windows.
@@ -134,20 +134,29 @@ VirusTotal y comprobar que el SHA-256 que muestra coincide con el de arriba.
 ## Estructura del repositorio
 
 ```text
-forlex-site/
-├─ index.html      Página del proyecto (GitHub Pages, raíz del sitio)
-├─ assets/         CSS, JavaScript e imágenes del sitio
-├─ downloads/      Espejo de los binarios publicados (+ SHA256SUMS.txt)
-├─ _deploy/        Notas de versión y guía de despliegue
-├─ LICENSE         Licencia MIT
-└─ .nojekyll       Desactiva el procesado de Jekyll en GitHub Pages
+forlex/
+├─ index.html          Página del proyecto (GitHub Pages, raíz del sitio)
+├─ assets/
+│  ├─ css/site.css     Estilos (tema oscuro, animaciones, responsive)
+│  ├─ js/site.js       Interacciones (galería, lightbox, sonido, contadores)
+│  ├─ fonts/           Inter + JetBrains Mono auto-hospedadas (woff2)
+│  ├─ img/             Capturas reales del programa en WebP (+ thumbs/)
+│  ├─ favicon/         Iconos del sitio
+│  ├─ og.jpg           Imagen para redes sociales (1200×630)
+│  └─ site.webmanifest
+├─ downloads/          Espejo de los binarios publicados (+ SHA256SUMS.txt)
+├─ tools/              Scripts de generación y verificación de assets
+├─ robots.txt · sitemap.xml
+├─ LICENSE             Licencia MIT
+└─ .nojekyll           Desactiva el procesado de Jekyll en GitHub Pages
 ```
 
 ## Publicar una nueva versión
 
-Los comandos exactos para publicar el sitio y crear el release están en
-[`_deploy/DEPLOY.md`](_deploy/DEPLOY.md). Las notas de la versión actual están en
-[`_deploy/RELEASE_NOTES.md`](_deploy/RELEASE_NOTES.md).
+El sitio se publica automáticamente desde la rama `main` con GitHub Pages. Los binarios se suben como
+assets de un **GitHub Release** con la etiqueta de versión (`v1.0.0`, `v1.1.0`, …); abajo quedan también
+como espejo en `downloads/`. Las notas de cada versión se leen en
+[Releases](https://github.com/zforlexx/forlex/releases).
 
 ## Licencia y créditos
 
